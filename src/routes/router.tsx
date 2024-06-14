@@ -11,13 +11,15 @@ import {Adidas} from "../components/pages/Adidas";
 import {Puma} from "../components/pages/Puma";
 import {Abibas} from "../components/pages/Abibas";
 import {Prices} from "../components/pages/Prices";
+import {Model} from "../components/pages/Model";
 
 
 const PATH = {
     ADIDAS: '/adidas',
     PUMA: '/puma',
     ABIBAS: '/abibas',
-    PRICES: '/prices'
+    PRICES: '/prices',
+    MODEL: '/:model/:id',
 } as const
 
 export const router = createBrowserRouter([
@@ -41,6 +43,10 @@ export const router = createBrowserRouter([
             {
                 path: PATH.PRICES,
                 element: <Prices/>
+            },
+            {
+                path: PATH.MODEL,
+                element: <Model/>
             },
         ]
     },
